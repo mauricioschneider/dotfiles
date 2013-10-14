@@ -1,0 +1,20 @@
+alias gsl="rvm gemset list"
+alias c="clear"
+alias mys="mysql.server $*"
+
+goto() {
+    case "$1" in
+	test)
+	    cd ~/test/test-folder;;
+        *)
+	    echo "The shortcut $1 does not exist";;
+    esac
+}
+
+gsu() {
+    rvm gemset use $1
+}
+
+gsc() {
+    rvm gemset create $1
+}
